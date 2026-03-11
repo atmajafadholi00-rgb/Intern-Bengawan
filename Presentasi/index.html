@@ -26,8 +26,8 @@
 
 <section class="hero" id="hero">
 
-<h1>LiDAR UAV System</h1>
-<p>Next generation aerial mapping technology combining LiDAR sensors with autonomous UAV platforms to produce high‑precision 3D terrain data.</p>
+<h1>AI-Driven Decision Maker for Secure Autonomous Drone Missions</h1>
+<p>Empowering autonomous drones with secure, intelligent, and reliable AI decision making.</p>.</p>
 
 <button class="button" onclick="scrollToSection()">Explore Innovation</button>
 
@@ -38,7 +38,7 @@
 <h2>Innovation Overview</h2>
 
 <p style="margin-top:20px;max-width:700px;">
-The proposed system integrates lightweight LiDAR sensors with UAV platforms to enable high resolution terrain mapping, vegetation analysis, and infrastructure inspection. Compared to traditional photogrammetry, LiDAR can capture elevation data even through vegetation, enabling accurate digital elevation models.
+Model ini mengintegrasikan Artificial Intelligence dengan sistem keamanan komunikasi dan pemantauan kesehatan drone secara real-time untuk memungkinkan pengambilan keputusan cepat, meningkatkan keamanan sistem, serta meningkatkan keberhasilan misi drone secara otonom.
 </p>
 
 </section>
@@ -63,17 +63,22 @@ The proposed system integrates lightweight LiDAR sensors with UAV platforms to e
 </div>
 
 <div class="card">
-<h3>Drone Health</h3>
-   <button onclick="toggleMenu()">Drone Health</button>
-    <div id="Drone Health" class="Health">
 
-    <button>batery</button><br><br>
-    <button>temperature</button><br><br>
-    <button>sensor</button>
-   
+<h3>Drone Health</h3>
+
+<button onclick="toggleMenu()">Drone Health</button>
+
+<div id="droneHealth" class="Health">
+
+<button>Battery</button><br><br>
+<button>Temperature</button><br><br>
+<button>Sensor</button>
+
 </div>
 
-</section>
+</div>
+
+
 
 <section id="workflow" class="fade">
 
@@ -82,7 +87,7 @@ The proposed system integrates lightweight LiDAR sensors with UAV platforms to e
 <div class="workflow">
 
 <div class="step">
-<b>1. Secure communication</b><br>
+<h2>1. Secure communication</h2><br>
 <button onclick="toggleMenu()">Secure Communication</button>
 
     <div id="secureMenu" class="menu">
@@ -92,18 +97,33 @@ The proposed system integrates lightweight LiDAR sensors with UAV platforms to e
     <p>Menjaga setiap perintah yang dikirim oleh drone supaya tidak dapat dimodifikasi oleh pihak yang tidak memiliki wewenang</p>
     <p>Untuk menjaga keamanan misi dari drone</p>
     <button>Anti Jamming</button><br><br>
-    <p> digunakan supaya mengatasi gangguan komunikasi antara Drone dengan Ground Control System, yang mengakibatkan Drone gagal menjalani full mission<p></p>
+    <p> digunakan supaya mengatasi gangguan komunikasi antara Drone dengan Ground Control System, yang mengakibatkan Drone gagal menjalani full mission<p>
     <p> dampak dari jamming : 1.RTL 2.Hover 3. Landing otomatis/fitur Land Safe </p>
     <p>Maka dari itu fungsi anti jamming sangat berguna untuk kesuksesan sebuah mission</p>
     
     <button>Secure Network</button>
-
+    <p>Berfungsi untuk menjaga segala bentuk keamanan jaringan supaya dapat menghiindari dari bentuk ancaman loss connection yang mengakibatkan sebuah drone gagal menjalankan sebuah mission</p>
     </div>
 </div>
 
 <div class="step">
-<b>2. UAV Deployment</b><br>
-UAV equipped with LiDAR sensor performs autonomous flight path.
+<h3>2. Drone Health</h3><br>
+  <button onclick="toggleMenu()">Drone Health</button>
+    <div id="Drone Health" class="Health">
+
+    <button>batery</button><br><br>
+    <p>Menggunakan fitur battery prediction jadi AI bakalan memberikan perkiraan dengan menggunakan baterai sekian dapat melakukan sebuah misi dengan jarak berapa sebelum take off</p>
+    <p>Dan pada saat terbang di udara jika baterai tiba tiba habis dari AI akan mengubah parameter untuk menyesuaikan kebutuhan baterai dengan misi yang dituju</p>
+    <button>temperature</button><br><br>
+    <p>Pada saat pre-flight cek AI akan membaca prediksi dari suhu motor brushless </p>
+    <p>ketika tidak ada pendeteksi perkiraan temperature drone akan mengurangi powernya </p>
+    <p>Maka dari itu fungsi prediksi disini sangat diperlukan supaya sebuah parameter dapat menyesuaikan kembali dengan kebutuhan misi. supaya misi dapat dilakukan dengan sukses dan selamat</p>
+    <button>sensor</button>
+    <p>pada saat pre-flight AI akan membaca prediksi dari sensor apakah ada panas dari sensor yang mengakibatkan kenaikan panas yang tidak konstan</p>
+    <p>Ketika sebuah drone tidak dapat memprediksi dari kenaikan sensor panas yang tidak konstan drone bisa jadi terjatuh/pada baterai akan terbakar</p>
+    <p>Disini peran yang penting bagi AI untuk dapat memprediksi dari sebuah sensor dan menyesuaikan  bentuk parameter agar misi dapat dilakukan dengan sukses dan selamat</p>
+
+
 </div>
 </div>
 
@@ -116,23 +136,20 @@ UAV equipped with LiDAR sensor performs autonomous flight path.
 <div class="grid">
 
 <div class="card">
-<h3>Disaster Mapping</h3>
-<p>Rapid terrain assessment for landslides and floods.</p>
+<h3>Impact</h3>
+<p>1.Dapat melakukan faster decision making</p>
+<p>2.Memperhitungkan segi efisiensi sebuah baterai</p>
+<p>3.Meningkatkan sebuah keberhasilan misi dan keselamatan Drone</p>
 </div>
 
 <div class="card">
-<h3>Forestry Monitoring</h3>
-<p>Measure canopy height and biomass estimation.</p>
-</div>
-
-<div class="card">
-<h3>Urban Planning</h3>
-<p>High accuracy digital elevation models for city development.</p>
-</div>
-
-<div class="card">
-<h3>Infrastructure Inspection</h3>
-<p>Mapping power lines, roads, and construction areas.</p>
+<h3>Aplication</h3>
+<p>1.Military</p>
+<p>memastikan setiap perintah misi yang dikirim ke drone terlindungi dari gangguan, penyadapan, maupun manipulasi oleh pihak yang tidak berwenang</p>
+<p>2.industrial Security</p>
+<p>Digunakan untuk inspeksi area industri dan pengambilan keputusan cepat untuk aktivitas mecurigakan</p>
+<p>3.Disaster Management</p>
+<p>memastikan tidak adanya gangguan gelombang radio karena tinggi nya latency radio saat melakukan sebuah rescue</p>
 </div>
 
 </div>
