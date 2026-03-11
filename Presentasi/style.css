@@ -5,11 +5,13 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 }
 
-body{
-font-family:'Inter',sans-serif;
-background:#0a0f1f;
-color:white;
-overflow-x:hidden;
+body {
+    font-family: 'Inter', sans-serif;
+    /* Gradient menyelimuti seluruh page */
+    background: radial-gradient(circle at top center, #1b3d8a 0%, #020617 70%, #0a0f1f 100%);
+    background-attachment: fixed; /* Membuat background diam saat di-scroll */
+    color: white;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -25,9 +27,15 @@ z-index:1000;
 transition:0.3s;
 }
 
-nav.scrolled{
-background:#020617;
-box-shadow:0 4px 20px rgba(0,0,0,0.6);
+nav.scrolled {
+    /* Menggunakan versi transparan dari #020617 */
+    background: rgba(2, 6, 23, 0.8); 
+    
+    /* Memastikan blurnya tetap dipanggil atau dipertebal saat di-scroll */
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); /* Untuk dukungan browser Safari */
+    
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
 nav ul{
@@ -72,9 +80,10 @@ width:100%;
 section{
 padding:120px 10%;
 min-height:100vh;
+background: transparent; /* Ditambahkan agar warna background body tembus */
 }
 
-/* HERO */
+/* HERO (Dua class hero digabung jadi satu di sini) */
 
 .hero{
 display:flex;
@@ -82,7 +91,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:radial-gradient(circle at center,#1b3d8a,#020617);
+background: transparent; /* Harus transparan agar efek nyambungnya berhasil */
 }
 
 .hero h1{
@@ -186,43 +195,4 @@ background:#131c38;
 /* HEADINGS */
 
 h2{
-font-family:'Orbitron',sans-serif;
-font-size:38px;
-letter-spacing:1px;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:#020617;
-color:#aaa;
-}
-
-/* ANIMATION */
-
-.fade{
-opacity:1;
-transform:translateY(0);
-transition:1s;
-}
-
-.fade.visible{
-opacity:1;
-transform:translateY(0);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:42px;
-}
-
-section{
-padding:100px 7%;
-}
-
-}
+font-family:'Orbitron',
