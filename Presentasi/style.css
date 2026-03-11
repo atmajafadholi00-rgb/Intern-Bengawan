@@ -1,198 +1,501 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+    /* =====================================
+    GLOBAL
+    ===================================== */
 
-body {
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    }
+
+    body{
     font-family: 'Inter', sans-serif;
-    /* Gradient menyelimuti seluruh page */
     background: radial-gradient(circle at top center, #1b3d8a 0%, #020617 70%, #0a0f1f 100%);
-    background-attachment: fixed; /* Membuat background diam saat di-scroll */
+    background-attachment: fixed;
     color: white;
     overflow-x: hidden;
-}
+    }
 
-/* NAVBAR */
+    body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 
-nav{
-position:fixed;
-width:100%;
-top:0;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(12px);
-padding:18px;
-z-index:1000;
-transition:0.3s;
-}
+    background-image:
+    linear-gradient(rgba(0,234,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,234,255,0.06) 1px, transparent 1px);
 
-nav.scrolled {
-    /* Menggunakan versi transparan dari #020617 */
+    background-size:60px 60px;
+
+    pointer-events:none;
+
+    z-index:-1;
+    }
+
+    /* =====================================
+    NAVBAR
+    ===================================== */
+
+    nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(12px);
+    padding:18px;
+    z-index:1000;
+    transition:0.3s;
+    }
+
+    nav.scrolled{
     background: rgba(2, 6, 23, 0.8); 
-    
-    /* Memastikan blurnya tetap dipanggil atau dipertebal saat di-scroll */
     backdrop-filter: blur(12px); 
-    -webkit-backdrop-filter: blur(12px); /* Untuk dukungan browser Safari */
-    
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-}
+    }
 
-nav ul{
-display:flex;
-justify-content:center;
-list-style:none;
-}
+    nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    flex-wrap:wrap;
+    }
 
-nav li{
-margin:0 25px;
-}
+    nav li{
+    margin:0 25px;
+    }
 
-nav a{
-text-decoration:none;
-color:white;
-font-weight:600;
-position:relative;
-transition:0.3s;
-}
+    nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    position:relative;
+    transition:0.3s;
+    }
 
-nav a::after{
-content:"";
-position:absolute;
-width:0%;
-height:2px;
-left:0;
-bottom:-5px;
-background:#00eaff;
-transition:0.3s;
-}
+    nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#00eaff;
+    transition:0.3s;
+    }
 
-nav a:hover{
-color:#00eaff;
-}
+    nav a:hover,
+    nav a.active{
+    color:#00eaff;
+    }
 
-nav a:hover::after{
-width:100%;
-}
+    nav a:hover::after,
+    nav a.active::after{
+    width:100%;
+    }
 
-/* SECTION */
 
-section{
-padding:120px 10%;
-min-height:100vh;
-background: transparent; /* Ditambahkan agar warna background body tembus */
-}
+    /* =====================================
+    SECTION
+    ===================================== */
 
-/* HERO (Dua class hero digabung jadi satu di sini) */
+    section{
+    padding:140px 10% 100px;
+    min-height:80vh;
+    transition:transform 0.3s;  
+    }
 
-.hero{
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background: transparent; /* Harus transparan agar efek nyambungnya berhasil */
-}
+    /* =====================================
+    HERO
+    ===================================== */
 
-.hero h1{
-font-family:'Orbitron',sans-serif;
-font-size:64px;
-margin-bottom:20px;
-letter-spacing:2px;
-text-shadow:0 0 20px #00eaff;
-}
+    .hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 
-.hero p{
-max-width:650px;
-opacity:0.85;
-font-size:18px;
-}
+    min-height:100vh;
+    padding-top:140px;
 
-.button{
-margin-top:30px;
-padding:15px 35px;
-background:#00eaff;
-color:black;
-border:none;
-font-weight:600;
-cursor:pointer;
-border-radius:8px;
-transition:0.3s;
-}
+    background:transparent;
 
-.button:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(0,234,255,0.5);
-}
+    position:relative;
+    overflow:hidden;
+    }
 
-/* GRID */
+    .hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:50px;
-}
+    background:radial-gradient(circle at center,#1b3d8a,#020617);
 
-/* CARD */
+    background-image:
+    linear-gradient(rgba(0,234,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,234,255,0.06) 1px, transparent 1px);
 
-.card{
-background:#10182f;
-padding:30px;
-border-radius:12px;
-transition:0.4s;
-border:1px solid rgba(255,255,255,0.05);
-position:relative;
-overflow:hidden;
-}
+    background-size:60px 60px;
 
-.card::before{
-content:"";
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:linear-gradient(120deg,transparent,rgba(0,234,255,0.3),transparent);
-transition:0.6s;
-}
+    pointer-events:none;
+    z-index:0;
+    }
 
-.card:hover::before{
-left:100%;
-}
+    .hero h1,
+    .hero p,
+    .hero button{
+    position:relative;
+    z-index:2;
+    }
 
-.card:hover{
-transform:translateY(-10px);
-border-color:#00eaff;
-box-shadow:0 10px 40px rgba(0,0,0,0.5);
-}
+    /* =====================================
+    BUTTON
+    ===================================== */
 
-.card h3{
-margin-bottom:10px;
-color:#00eaff;
-}
+    .button{
+    margin-top:30px;
+    padding:15px 35px;
+    background:#00eaff;
+    color:black;
+    border:none;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:8px;
+    transition:0.3s;
+    box-shadow:0 0 10px rgba(0,234,255,0.4);
+    }
 
-/* WORKFLOW */
+    .button:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 10px 30px rgba(0,234,255,0.5),
+    0 0 20px rgba(0,234,255,0.8);
+    }
 
-.workflow{
-margin-top:40px;
-}
 
-.step{
-margin:20px 0;
-padding:22px;
-background:#10182f;
-border-left:4px solid #00eaff;
-border-radius:6px;
-transition:0.3s;
-}
+    /* =====================================
+    GRID LAYOUT
+    ===================================== */
 
-.step:hover{
-transform:translateX(8px);
-background:#131c38;
-}
+    .grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:50px;
+    }
 
-/* HEADINGS */
 
-h2{
-font-family:'Orbitron',
+    /* =====================================
+    CARD
+    ===================================== */
+
+    .card{
+    background:#10182f;
+    padding:30px;
+    border-radius:12px;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.05);
+    position:relative;
+    overflow:hidden;
+    }
+
+    .card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(0,234,255,0.3),transparent);
+    transition:0.6s;
+    }
+
+    .card:hover::before{
+    left:100%;
+    }
+
+    .card:hover{
+    transform:translateY(-10px);
+    border-color:#00eaff;
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,234,255,0.2);
+    }
+
+    .card h3{
+    margin-bottom:10px;
+    color:#00eaff;
+    }
+
+
+    /* =====================================
+    FEATURE MENU
+    ===================================== */
+
+    .menu button{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#0f1b3d;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .menu button:hover{
+    background:#00eaff;
+    color:black;
+    transform:scale(1.05);
+    }
+
+    .feature-info{
+    display:none;
+    margin-top:15px;
+    padding:12px;
+    background:#0e1732;
+    border-radius:6px;
+    font-size:14px;
+    line-height:1.5;
+    border:1px solid rgba(0,234,255,0.2);
+    animation:fadeIn 0.4s ease;
+    }
+
+    .feature-info.active{
+    display:block;
+    }
+
+
+    /* =====================================
+    WORKFLOW TIMELINE
+    ===================================== */
+
+    .workflow{
+    margin-top:50px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    }
+
+    .step{
+    margin:25px 0;
+    padding:25px 30px;
+    background:#10182f;
+    border-left:4px solid #00eaff;
+    border-radius:10px;
+    position:relative;
+    transition:0.3s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    }
+
+    .step h3{
+    margin-bottom:10px;
+    color:#00eaff;
+    font-size:20px;
+    }
+
+    .step p{
+    line-height:1.6;
+    opacity:0.9;
+    }
+
+
+    /* =====================================
+    IMPACT DATA PANEL
+    ===================================== */
+
+    .data-panel{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    }
+
+    .data-box{
+    background:#0e1732;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid rgba(0,234,255,0.1);
+    }
+
+    .data-box h3{
+    color:#00eaff;
+    font-size:26px;
+    }
+
+    .data-box p{
+    font-size:12px;
+    opacity:0.7;
+    }
+
+    #impact .card p{
+    padding:6px 0;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+
+
+    /* =====================================
+    TITLES
+    ===================================== */
+
+    h2{
+    font-family:'Orbitron',sans-serif;
+    font-size:38px;
+    letter-spacing:1px;
+    text-align:center;
+    margin-bottom:30px;
+    text-shadow:0 0 10px rgba(0,234,255,0.5);
+    }
+
+    #innovation{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    }
+
+    #innovation p{
+    max-width:750px;
+    margin-top:20px;
+    line-height:1.7;
+    font-size:16px;
+    opacity:0.9;
+    }
+
+    /* =====================================
+    FOOTER
+    ===================================== */
+
+    footer{
+    text-align:center;
+    padding:40px;
+    background:#020617;
+    color:#aaa;
+    }
+
+
+    /* =====================================
+    ANIMATION
+    ===================================== */
+
+    .fade{
+    opacity:1;
+    transform:translateY(0);
+    transition:1s;
+    }
+
+    .fade.visible{
+    opacity:1;
+    transform:translateY(0);
+    }
+
+    @keyframes floatBG{
+    0%{transform:translateY(0)}
+    100%{transform:translateY(-40px)}
+    }
+
+    @keyframes fadeIn{
+    from{
+    opacity:0;
+    transform:translateY(10px);
+    }
+    to{
+    opacity:1;
+    transform:translateY(0);
+    }
+    }
+
+
+    /* =====================================
+    CYBER GRID
+    ===================================== */
+
+    .grid-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:
+    linear-gradient(rgba(0,234,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,234,255,0.08) 1px, transparent 1px);
+    background-size:60px 60px;
+    animation:gridMove 12s linear infinite;
+    z-index:0;
+    pointer-events:none;
+    }
+
+    /* =====================================
+    RADAR EFFECT
+    ===================================== */
+
+    .radar{
+    position:absolute;
+    width:500px;
+    height:500px;
+
+    top:55%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+    border:2px solid rgba(0,234,255,0.25);
+
+    animation:radarSpin 12s linear infinite;
+
+    opacity:0.5;
+    }
+
+    .radar::after{
+    content:"";
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    border:2px solid rgba(0,234,255,0.3);
+
+    animation:pulse 3s infinite;
+    }
+
+    /* =====================================
+    RESPONSIVE
+    ===================================== */
+
+    @media(max-width:768px){
+
+    .grid{
+    grid-template-columns:1fr;
+    }
+
+    .hero h1{
+    font-size:36px;
+    }
+
+    section{
+    padding:100px 7%;
+    }
+
+    nav li{
+    margin:8px;
+    }
+
+    nav ul{
+    gap:10px;
+    }
+
+    }

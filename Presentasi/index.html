@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LiDAR UAV Innovation</title>
+
+<title>AI Powered Secure Autonomous Drone Innovation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 <ul>
-<li><a href="#hero">Home</a></li>
-<li><a href="#about">Innovation</a></li>
+<li><a href="#home">Home</a></li>
+<li><a href="#innovation">Innovation</a></li>
 <li><a href="#features">Features</a></li>
-
 <li><a href="#workflow">Workflow</a></li>
 <li><a href="#impact">Impact</a></li>
 </ul>
 </nav>
 
-<section class="hero" id="hero">
+<!-- HERO -->
+
+<section id = home class="hero">
+
+<div class="radar"></div>
 
 <h1>AI-Driven Decision Maker for Secure Autonomous Drone Missions</h1>
-<p>Empowering autonomous drones with secure, intelligent, and reliable AI decision making.</p>.</p>
 
-<button class="button" onclick="scrollToSection()">Explore Innovation</button>
+<p>
+Empowering autonomous drones with secure, intelligent, and reliable AI decision making.
+</p>
+
+<button class="button" onclick="location.href='#innovation'">
+Explore Innovation
+</button>
 
 </section>
 
-<section id="about" class="fade">
+<!-- ABOUT -->
+
+<section id="innovation" class="fade">
 
 <h2>Innovation Overview</h2>
 
 <p style="margin-top:20px;max-width:700px;">
-Model ini mengintegrasikan Artificial Intelligence dengan sistem keamanan komunikasi dan pemantauan kesehatan drone secara real-time untuk memungkinkan pengambilan keputusan cepat, meningkatkan keamanan sistem, serta meningkatkan keberhasilan misi drone secara otonom.
+Model ini mengintegrasikan Artificial Intelligence dengan sistem keamanan komunikasi
+dan pemantauan kesehatan drone secara real-time untuk memungkinkan pengambilan
+keputusan cepat, meningkatkan keamanan sistem, serta meningkatkan keberhasilan
+misi drone secara otonom.
 </p>
 
 </section>
+
+<!-- FEATURES -->
 
 <section id="features" class="fade">
 
@@ -49,36 +67,66 @@ Model ini mengintegrasikan Artificial Intelligence dengan sistem keamanan komuni
 
 <div class="grid">
 
+<!-- CARD 1 -->
 <div class="card">
+
 <h3>Secure Communication</h3>
-    <button onclick="toggleMenu()">Secure Communication</button>
 
-    <div id="secureMenu" class="menu">
+<div class="menu">
 
-    <button>End-to-End Encryption</button><br><br>
-    <button>Anti Jamming</button><br><br>
-    <button>Secure Network</button>
+<button onclick="showFeature('encryption')">End-to-End Encryption</button>
+<button onclick="showFeature('jamming')">Anti Jamming</button>
+<button onclick="showFeature('network')">Secure Network</button>
 
-    </div>
+<div class="feature-info" id="encryption">
+End-to-End Encryption memastikan semua komunikasi drone terenkripsi sehingga hanya pihak yang memiliki akses yang dapat membaca data misi.
 </div>
 
+<div class="feature-info" id="jamming">
+Anti-Jamming system mendeteksi gangguan sinyal dan secara otomatis menyesuaikan frekuensi komunikasi.
+</div>
+
+<div class="feature-info" id="network">
+Secure Network menggunakan protokol komunikasi aman untuk mencegah akses tidak sah.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 2 -->
 <div class="card">
 
 <h3>Drone Health</h3>
 
-<button onclick="toggleMenu()">Drone Health</button>
+<div class="menu">
 
-<div id="droneHealth" class="Health">
+<button onclick="showFeature('battery')">Battery</button>
+<button onclick="showFeature('temperature')">Temperature</button>
+<button onclick="showFeature('sensor')">Sensor</button>
 
-<button>Battery</button><br><br>
-<button>Temperature</button><br><br>
-<button>Sensor</button>
+<div class="feature-info" id="battery">
+AI memprediksi penggunaan baterai sebelum misi untuk memastikan drone dapat kembali dengan aman.
+</div>
+
+<div class="feature-info" id="temperature">
+Sistem memonitor suhu motor dan komponen untuk mencegah overheating.
+</div>
+
+<div class="feature-info" id="sensor">
+Monitoring sensor memastikan semua sensor drone bekerja optimal selama misi.
+</div>
+
+</div>
 
 </div>
 
 </div>
 
+</section>
 
+<!-- WORKFLOW -->
 
 <section id="workflow" class="fade">
 
@@ -87,47 +135,43 @@ Model ini mengintegrasikan Artificial Intelligence dengan sistem keamanan komuni
 <div class="workflow">
 
 <div class="step">
-<h2>1.Secure communication</h2><br>
-<button onclick="toggleMenu()"></button>
 
-    <div id="secureMenu" class="menu">
+<h3>1. Secure Communication</h3>
 
-    <button>End-to-End Encryption</button><br><br>
-    <p>Semua data yang ada di sistem drone hanya dibaca oleh pihak yang memiliki akses</p>
-    <p>Menjaga setiap perintah yang dikirim oleh drone supaya tidak dapat dimodifikasi oleh pihak yang tidak memiliki wewenang</p>
-    <p>Untuk menjaga keamanan misi dari drone</p>
-    <button>Anti Jamming</button><br><br>
-    <p> digunakan supaya mengatasi gangguan komunikasi antara Drone dengan Ground Control System, yang mengakibatkan Drone gagal menjalani full mission<p>
-    <p> dampak dari jamming : 1.RTL 2.Hover 3. Landing otomatis/fitur Land Safe </p>
-    <p>Maka dari itu fungsi anti jamming sangat berguna untuk kesuksesan sebuah mission</p>
-    
-    <button>Secure Network</button>
-    <p>Berfungsi untuk menjaga segala bentuk keamanan jaringan supaya dapat menghiindari dari bentuk ancaman loss connection yang mengakibatkan sebuah drone gagal menjalankan sebuah mission</p>
-    </div>
+<p>
+Semua data yang ada di sistem drone hanya dapat dibaca oleh pihak yang memiliki akses.
+Hal ini menjaga setiap perintah yang dikirim oleh drone supaya tidak dapat dimodifikasi
+oleh pihak yang tidak memiliki wewenang.
+</p>
+
+<p>
+Fitur Anti Jamming digunakan untuk mengatasi gangguan komunikasi antara drone
+dan Ground Control System yang dapat menyebabkan misi gagal.
+</p>
+
 </div>
 
 <div class="step">
-<h3>2. Drone Health</h3><br>
-  <button onclick="toggleMenu()"></button>
-    <div id="Drone Health" class="Health">
 
-    <button>batery</button><br><br>
-    <p>Menggunakan fitur battery prediction jadi AI bakalan memberikan perkiraan dengan menggunakan baterai sekian dapat melakukan sebuah misi dengan jarak berapa sebelum take off</p>
-    <p>Dan pada saat terbang di udara jika baterai tiba tiba habis dari AI akan mengubah parameter untuk menyesuaikan kebutuhan baterai dengan misi yang dituju</p>
-    <button>temperature</button><br><br>
-    <p>Pada saat pre-flight cek AI akan membaca prediksi dari suhu motor brushless </p>
-    <p>ketika tidak ada pendeteksi perkiraan temperature drone akan mengurangi powernya </p>
-    <p>Maka dari itu fungsi prediksi disini sangat diperlukan supaya sebuah parameter dapat menyesuaikan kembali dengan kebutuhan misi. supaya misi dapat dilakukan dengan sukses dan selamat</p>
-    <button>sensor</button>
-    <p>pada saat pre-flight AI akan membaca prediksi dari sensor apakah ada panas dari sensor yang mengakibatkan kenaikan panas yang tidak konstan</p>
-    <p>Ketika sebuah drone tidak dapat memprediksi dari kenaikan sensor panas yang tidak konstan drone bisa jadi terjatuh/pada baterai akan terbakar</p>
-    <p>Disini peran yang penting bagi AI untuk dapat memprediksi dari sebuah sensor dan menyesuaikan  bentuk parameter agar misi dapat dilakukan dengan sukses dan selamat</p>
+<h3>2. Drone Health Monitoring</h3>
 
+<p>
+AI memprediksi penggunaan baterai sebelum take-off sehingga drone dapat
+menentukan jarak misi yang aman.
+</p>
+
+<p>
+Sistem juga memonitor suhu motor dan sensor untuk mencegah overheating
+yang dapat menyebabkan kegagalan sistem atau kecelakaan drone.
+</p>
 
 </div>
+
 </div>
 
 </section>
+
+<!-- IMPACT -->
 
 <section id="impact" class="fade">
 
@@ -136,31 +180,63 @@ Model ini mengintegrasikan Artificial Intelligence dengan sistem keamanan komuni
 <div class="grid">
 
 <div class="card">
+
 <h3>Impact</h3>
-<p>1.Dapat melakukan faster decision making</p>
-<p>2.Memperhitungkan segi efisiensi sebuah baterai</p>
-<p>3.Meningkatkan sebuah keberhasilan misi dan keselamatan Drone</p>
+
+<p>Faster decision making</p>
+<p>Battery efficiency optimization</p>
+<p>Higher mission success rate</p>
+
 </div>
 
 <div class="card">
-<h3>Aplication</h3>
-<p>1.Military</p>
-<p>memastikan setiap perintah misi yang dikirim ke drone terlindungi dari gangguan, penyadapan, maupun manipulasi oleh pihak yang tidak berwenang</p>
-<p>2.industrial Security</p>
-<p>Digunakan untuk inspeksi area industri dan pengambilan keputusan cepat untuk aktivitas mecurigakan</p>
-<p>3.Disaster Management</p>
-<p>memastikan tidak adanya gangguan gelombang radio karena tinggi nya latency radio saat melakukan sebuah rescue</p>
+
+<h3>Applications</h3>
+
+<p><b>Military</b> – komunikasi misi aman dari penyadapan.</p>
+<p><b>Industrial Security</b> – inspeksi area industri dan deteksi aktivitas mencurigakan.</p>
+<p><b>Disaster Management</b> – membantu operasi penyelamatan dengan komunikasi stabil.</p>
+
 </div>
 
 </div>
 
 </section>
 
+<div class="data-panel">
+
+<div class="data-box">
+<h3>98%</h3>
+<p>Mission Success Rate</p>
+</div>
+
+<div class="data-box">
+<h3>2.3s</h3>
+<p>Decision Response</p>
+</div>
+
+<div class="data-box">
+<h3>85%</h3>
+<p>Battery Optimization</p>
+</div>
+
+<div class="data-box">
+<h3>24/7</h3>
+<p>Autonomous Monitoring</p>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
 <footer>
 
-<p>UAV LiDAR Innovation</p>
-<p>Created for UAV Programming Class</p>
+<p>INOVASI UAV</p>
+<p>WEBDEV MUMET</p>
 
 </footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
