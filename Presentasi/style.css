@@ -16,7 +16,7 @@ overflow-x:hidden;
 
 nav{
 position:fixed;
-width:50%;
+width:100%;
 top:0;
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(12px);
@@ -203,8 +203,8 @@ color:#aaa;
 /* ANIMATION */
 
 .fade{
-opacity:0;
-transform:translateY(40px);
+opacity:1;
+transform:translateY(0);
 transition:1s;
 }
 
