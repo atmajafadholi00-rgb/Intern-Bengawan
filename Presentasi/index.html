@@ -18,6 +18,7 @@
 <li><a href="#hero">Home</a></li>
 <li><a href="#about">Innovation</a></li>
 <li><a href="#features">Features</a></li>
+
 <li><a href="#workflow">Workflow</a></li>
 <li><a href="#impact">Impact</a></li>
 </ul>
@@ -49,25 +50,27 @@ The proposed system integrates lightweight LiDAR sensors with UAV platforms to e
 <div class="grid">
 
 <div class="card">
-<h3>High Precision</h3>
-<p>Centimeter‑level terrain elevation accuracy using LiDAR ranging technology.</p>
+<h3>Secure Communication</h3>
+    <button onclick="toggleMenu()">Secure Communication</button>
+
+    <div id="secureMenu" class="menu">
+
+    <button>End-to-End Encryption</button><br><br>
+    <button>Anti Jamming</button><br><br>
+    <button>Secure Network</button>
+
+    </div>
 </div>
 
 <div class="card">
-<h3>Autonomous Flight</h3>
-<p>Pre‑planned waypoint missions allow automated data collection.</p>
-</div>
+<h3>Drone Health</h3>
+   <button onclick="toggleMenu()">Drone Health</button>
+    <div id="Drone Health" class="Health">
 
-<div class="card">
-<h3>3D Point Cloud</h3>
-<p>Generates dense 3D point clouds for terrain and structure modeling.</p>
-</div>
-
-<div class="card">
-<h3>Rapid Survey</h3>
-<p>Large mapping areas can be surveyed much faster than ground methods.</p>
-</div>
-
+    <button>batery</button><br><br>
+    <button>temperature</button><br><br>
+    <button>sensor</button>
+   
 </div>
 
 </section>
@@ -79,25 +82,29 @@ The proposed system integrates lightweight LiDAR sensors with UAV platforms to e
 <div class="workflow">
 
 <div class="step">
-<b>1. Mission Planning</b><br>
-Define survey boundary and altitude using mission planning software.
+<b>1. Secure communication</b><br>
+<button onclick="toggleMenu()">Secure Communication</button>
+
+    <div id="secureMenu" class="menu">
+
+    <button>End-to-End Encryption</button><br><br>
+    <p>Semua data yang ada di sistem drone hanya dibaca oleh pihak yang memiliki akses</p>
+    <p>Menjaga setiap perintah yang dikirim oleh drone supaya tidak dapat dimodifikasi oleh pihak yang tidak memiliki wewenang</p>
+    <p>Untuk menjaga keamanan misi dari drone</p>
+    <button>Anti Jamming</button><br><br>
+    <p> digunakan supaya mengatasi gangguan komunikasi antara Drone dengan Ground Control System, yang mengakibatkan Drone gagal menjalani full mission<p></p>
+    <p> dampak dari jamming : 1.RTL 2.Hover 3. Landing otomatis/fitur Land Safe </p>
+    <p>Maka dari itu fungsi anti jamming sangat berguna untuk kesuksesan sebuah mission</p>
+    
+    <button>Secure Network</button>
+
+    </div>
 </div>
 
 <div class="step">
 <b>2. UAV Deployment</b><br>
 UAV equipped with LiDAR sensor performs autonomous flight path.
 </div>
-
-<div class="step">
-<b>3. Data Acquisition</b><br>
-LiDAR continuously measures ground distance generating raw point data.
-</div>
-
-<div class="step">
-<b>4. Data Processing</b><br>
-Point cloud processed into DEM, DSM, and 3D terrain models.
-</div>
-
 </div>
 
 </section>
