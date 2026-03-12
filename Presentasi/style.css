@@ -1,6 +1,4 @@
-    /* =====================================
-    GLOBAL
-    ===================================== */
+    /*GLOBAL*/
 
     *{
     margin:0;
@@ -36,9 +34,7 @@
     z-index:-1;
     }
 
-    /* =====================================
-    NAVBAR
-    ===================================== */
+    /*NAVBAR*/
 
     nav{
     position:fixed;
@@ -98,10 +94,7 @@
     width:100%;
     }
 
-
-    /* =====================================
-    SECTION
-    ===================================== */
+    /*SECTION*/
 
     section{
     padding:140px 10% 100px;
@@ -109,9 +102,7 @@
     transition:transform 0.3s;  
     }
 
-    /* =====================================
-    HERO
-    ===================================== */
+    /*HERO*/
 
     .hero{
     display:flex;
@@ -163,9 +154,26 @@
     animation:floatDrone 4s ease-in-out infinite;
     }
 
-    /* =====================================
-    BUTTON
-    ===================================== */
+    .innovation-drone{
+    width:100%;
+    max-width:550px;
+
+    display:block;
+    margin:60px auto 0 auto;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.6),
+    0 0 20px rgba(0,234,255,0.25);
+    animation:floatDrone 4s ease-in-out infinite;
+    }
+
+    #innovation p{
+    margin-bottom:80px;
+    }
+
+    /*BUTTON*/
 
     .button{
     margin-top:30px;
@@ -187,10 +195,7 @@
     0 0 20px rgba(0,234,255,0.8);
     }
 
-
-    /* =====================================
-    GRID LAYOUT
-    ===================================== */
+    /* GRID LAYOUT*/
 
     .grid{
     display:grid;
@@ -200,9 +205,7 @@
     }
 
 
-    /* =====================================
-    CARD
-    ===================================== */
+    /*CARD*/
 
     .card{
     background:#10182f;
@@ -243,9 +246,7 @@
     }
 
 
-    /* =====================================
-    FEATURE MENU
-    ===================================== */
+    /*FEATURE MENU*/
 
     .menu button{
     width:100%;
@@ -281,10 +282,7 @@
     display:block;
     }
 
-
-    /* =====================================
-    WORKFLOW TIMELINE
-    ===================================== */
+    /*WORKFLOW TIMELINE*/
 
     .workflow{
     margin-top:50px;
@@ -316,10 +314,7 @@
     opacity:0.9;
     }
 
-
-    /* =====================================
-    IMPACT DATA PANEL
-    ===================================== */
+    /*IMPACT DATA PANEL*/
 
     .data-panel{
     margin-top:40px;
@@ -352,9 +347,7 @@
     }
 
 
-    /* =====================================
-    TITLES
-    ===================================== */
+    /*TITLES*/
 
     h2{
     font-family:'Orbitron',sans-serif;
@@ -380,9 +373,7 @@
     opacity:0.9;
     }
 
-    /* =====================================
-    FOOTER
-    ===================================== */
+    /*FOOTER*/
 
     footer{
     text-align:center;
@@ -392,9 +383,7 @@
     }
 
 
-    /* =====================================
-    ANIMATION
-    ===================================== */
+    /*ANIMATION*/
 
     .fade{
     opacity:1;
@@ -435,9 +424,7 @@
     }
     }
 
-    /* =====================================
-    CYBER GRID
-    ===================================== */
+    /*CYBER GRID*/
 
     .grid-overlay{
     position:absolute;
@@ -454,45 +441,7 @@
     pointer-events:none;
     }
 
-    /* =====================================
-    RADAR EFFECT
-    ===================================== */
-
-    .radar{
-    position:absolute;
-    width:500px;
-    height:500px;
-
-    top:55%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    border-radius:50%;
-    border:2px solid rgba(0,234,255,0.25);
-
-    animation:radarSpin 12s linear infinite;
-
-    opacity:0.5;
-    }
-
-    .radar::after{
-    content:"";
-    position:absolute;
-
-    width:100%;
-    height:100%;
-
-    border-radius:50%;
-
-    border:2px solid rgba(0,234,255,0.3);
-
-    animation:pulse 3s infinite;
-    }
-
-    /* =====================================
-    RESPONSIVE
-    ===================================== */
+    /*RESPONSIVE*/
 
     @media(max-width:768px){
 
