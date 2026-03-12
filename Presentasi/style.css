@@ -156,6 +156,13 @@
     z-index:2;
     }
 
+    .drone-img{
+    width: 440px;
+    margin-bottom:25px;
+    filter:drop-shadow(0 0 20px rgba(0,234,255,0.7));
+    animation:floatDrone 4s ease-in-out infinite;
+    }
+
     /* =====================================
     BUTTON
     ===================================== */
@@ -416,6 +423,17 @@
     }
     }
 
+    @keyframes floatDrone{
+    0%{
+    transform:translateY(0px);
+    }
+    50%{
+    transform:translateY(-12px);
+    }
+    100%{
+    transform:translateY(0px);
+    }
+    }
 
     /* =====================================
     CYBER GRID
